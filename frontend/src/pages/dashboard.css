@@ -4,7 +4,7 @@ body {
 
 .cont {
     display: grid;
-    grid-template-columns: 15% 50% 35% ;
+    grid-template-columns: 15% 50% 35%;
 }
 
 .navbar {
@@ -20,9 +20,12 @@ body {
     font-size: 1.5vw;
     margin: 5%;
     text-align: center;
+    border-bottom: 2px rgba(184, 175, 175, 0.459) solid;
 }
 
 .orderDetails {
+    display: grid;
+    grid-template-columns: auto auto;
     margin: 5%;
     width: auto;
     background-color: rgba(189, 181, 181, 0.315);
@@ -31,6 +34,24 @@ body {
     border-radius: 10%;
 
 }
-.third-col{
+
+.third-col {
     margin: 10%;
+}
+
+.li {
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 20% auto;
+    font-size: 1vw;
+    color: white;
+    padding: 5%;
+    grid-gap: 5%;
+}
+
+.li img {
+    justify-self: center;
+}
+.li:hover {
+    color: red;
 }
