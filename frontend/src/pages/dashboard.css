@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(255, 255, 255);
+}
+
+.cont {
+    display: grid;
+    grid-template-columns: 15% 50% 35% ;
+}
+
+.navbar {
+    background-color: #2A8A87;
+    height: 99vh;
+
+}
+
+.title {
+    display: grid;
+    grid-template-columns: auto auto;
+    color: white;
+    font-size: 1.5vw;
+    margin: 5%;
+    text-align: center;
+}
+
+.orderDetails {
+    margin: 5%;
+    width: auto;
+    background-color: rgba(189, 181, 181, 0.315);
+    padding: 10%;
+    height: 70vh;
+    border-radius: 10%;
+
+}
+.third-col{
+    margin: 10%;
+}
