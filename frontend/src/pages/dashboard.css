@@ -25,7 +25,7 @@ body {
 
 .orderDetails {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
     margin: 5%;
     width: auto;
     background-color: rgba(189, 181, 181, 0.315);
@@ -35,8 +35,41 @@ body {
 
 }
 
+.sec-1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+/* .sec-2 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+} */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 18px;
+    padding: 10%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+h3 {
+    color: #2A8A87;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+
 .third-col {
     margin: 10%;
+    display: grid;
+    grid-template-rows: auto auto auto;
 }
 
 .li {
@@ -52,6 +85,124 @@ body {
 .li img {
     justify-self: center;
 }
+
 .li:hover {
     color: red;
+}
+
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    border-radius: 10%;
+    background-color:rgba(189, 181, 181, 0.315);
+
+}
+
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #D7545D;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+    background: rgb(255, 254, 254);
+}
+
+.cal {
+    text-align: center;
+}
+
+.sec-3 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.sec-3 button {
+    width: 70%;
+    height: 40%;
+    font-size: 1.2vw;
+    color: #ffffff;
+    border-radius: 10%;
+    outline: none;
+    text-decoration: none;
+    padding: 6%;
+    border: none;
+}
+
+.red {
+    background-color: #D7545D;
+}
+
+.blue {
+    background-color: #2A8A87;
+}
+
+.yellow {
+    background-color: #E3B750;
+}
+
+.green {
+    background-color: #7CE775;
+}
+
+.thrd-sec2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.thrd-btns {
+    width: 70%;
+    height: 40%;
+    font-size: 1.2vw;
+    border-radius: 10%;
+    border: 1px solid #2A8A87;
+    outline: none;
+    text-decoration: none;
+    padding: 6%;
+    margin-top: 20%;
+}
+.total-big{
+    width: 70%;
+    height: 60%;
+    font-size: 1.2vw;
+    border-radius: 10%;
+    border: 1px solid #2A8A87;
+    outline: none;
+    text-decoration: none;
+    padding: 6%;
 }
