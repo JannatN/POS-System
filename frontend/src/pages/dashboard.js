@@ -48,8 +48,16 @@ class Dashboard extends Component {
                     <div className="orderDetails">
                         <div className="sec-1">
                             <img src={Blouse} alt=' icon' />
-                            <img src={Plus} alt=' icon' />
-                            <img src={Min} alt=' icon' />
+                            <div className="addMin">
+                                <img src={Plus} alt=' icon' />
+                                <div className="sec-1-sq">0</div>
+                                <img src={Min} alt=' icon' />
+                                {/* <label> Price:</label> */}
+                                <div className="sec-1-sq">0 </div>
+                                {/* <label > Total: </label> */}
+                                <div className="sec-1-sq">0</div>
+
+                            </div>
                         </div>
                         <div className="sec-2">
 
@@ -94,10 +102,15 @@ class Dashboard extends Component {
                             </form>
                         </div>
                     </div>
-                    <div className = "thrd-sec2">
+                    <div className="thrd-sec2">
                         <div className="total-big">0.00</div>
                         {/* <label className="label-3th">currency</label> */}
-                        <div className="thrd-btns">JD</div>
+                        <select className="thrd-btns" name="cur" id="cur">
+                            <option value="JD">JD</option>
+                            <option value="NIS">NIS</option>
+                            <option value="USD">USD</option>
+                        </select>
+
                         {/* <label className="label-3th">Tendered</label> */}
 
                         <div className="thrd-btns">0.0</div>
@@ -108,6 +121,20 @@ class Dashboard extends Component {
                     </div>
 
                     <div className="cal"><img src={Calculater} alt=' icon' width="70%" /></div>
+
+                    <div className="radio">
+                        <input type="radio" id="cash" name="cash" value="Cash" />
+                        <label for="cash">Cash</label>
+                        <input type="radio" id="credit" name="credit" value="credit" />
+                        <label for="credit">Credit</label>
+
+                        <input type="radio" id="check" name="check" value="check" />
+                        <label for="check">Checks</label>
+
+                        <input type="radio" id="not" name="not" value="not" />
+                        <label for="cash">Not Paid</label>
+
+                    </div>
                 </div>
 
             </div>
