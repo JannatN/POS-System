@@ -20,17 +20,16 @@ app.use(express.json());
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-
 app.get('/', (req, res) => {
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); 
-}); 
+    res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
+});
 
-app.use('/pos', userRouter);
+app.use('/api', userRouter);
 app.listen(port, () => {
     // perform a database connection when server starts
-    // dbo.connectToServer(function (err) {
-    //   if (err) console.error(err);
-   
+    // dbo.connectToServer(function(err) {
+    //     if (err) console.error(err);
+
     // });
     console.log(`Server is running on port: ${port}`);
-  });
+});
