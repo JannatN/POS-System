@@ -1,52 +1,44 @@
 const User = require('../models/user')
-//var jwt = require("jsonwebtoken");
-//var bcrypt = require("bcryptjs");
+var jwt = require("jsonwebtoken");
+var bcrypt = require("bcryptjs");
 
-signin = (req, res) => {
-    User.findOne({
-      username: req.body.username
-    })
-//       .populate("roles", "-__v")
-//       .exec((err, user) => {
-//         if (err) {
-//           res.status(500).send({ message: err });
-//           return;
-//         }
-  
-//         if (!user) {
-//           return res.status(404).send({ message: "User Not found." });
-//         }
-  
-//         var passwordIsValid = bcrypt.compareSync(
-//           req.body.password,
-//           user.password
-//         );
-  
-//         if (!passwordIsValid) {
-//           return res.status(401).send({
-//             accessToken: null,
-//             message: "Invalid Password!"
-//           });
-//         }
-  
-//         var token = jwt.sign({ id: user.id }, config.secret, {
-//           expiresIn: 86400 // 24 hours
-//         });
-  
-//         var authorities = [];
-  
-//         for (let i = 0; i < user.roles.length; i++) {
-//           authorities.push("ROLE_" + user.roles[i].name.toUpperCase());
-//         }
-//         res.status(200).send({
-//           id: user._id,
-//           username: user.username,
-//           email: user.email,
-//           roles: authorities,
-//           accessToken: token
-//         });
-//       });
-   };
+const login = (req, res) => {
+  var username = req.body.username
+  var password = req.body.password
+
+  User.findOne({
+    username: req.body.username
+  }).then(user => {
+    if(user){
+      // bcrypt.compare(password,user.password, function(err,result){
+      //   if(err){
+      //     res.json({
+      //       error: err
+      //     })
+      //   }
+      let result = user.password
+      // console.log(result == password)
+      // console.log(result)
+      // console.log(password)
+        if(result == password){
+          let token = jwt.sign({username:user.username},'verySecretValue', {expiresIn:'1h'})
+          res.json({
+            message: 'Login Successful',
+            token
+          })
+        }else{
+          res.json({
+            message: 'Password does not matched'
+          })
+        }
+      //})
+    }else{
+      res.json({
+        message: 'No user found !'
+      })
+    }
+  })
+  }
 
 
-module.exports = {signin}
+module.exports = {login}

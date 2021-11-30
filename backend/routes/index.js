@@ -5,7 +5,7 @@ const UserController = require('../controllers/user')
 const ProductCtrl = require('../controllers/product')
 
 
-//router.post('/signin', UserController.signin);
+router.post('/login', UserController.login);
 
 router.post('/product', ProductCtrl.createProduct)
 router.put('/product/:id', ProductCtrl.updateProduct)
