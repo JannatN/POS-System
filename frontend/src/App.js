@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Cashier from './components/cashier';
 
 class App extends Component {
 state = {
@@ -26,10 +27,7 @@ state = {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          WELCOME TO POS SYSTEM
-        </header>
-        <p className="App-intro">{this.state.data}</p>
+       <Cashier/>
       </div>
     );
   }
