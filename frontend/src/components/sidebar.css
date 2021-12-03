@@ -1,0 +1,35 @@
+.navbar {
+    background-color: #2A8A87;
+    height: 99vh;
+
+}
+
+.title {
+    display: grid;
+    grid-template-columns: 20% auto;
+    color: white;
+    font-size: 1.5vw;
+    margin: 5%;
+    text-align: center;
+    border-bottom: 2px rgba(184, 175, 175, 0.459) solid;
+}
+.li {
+    margin-left: 5%;
+    display: grid;
+    grid-template-columns: 20% auto;
+    font-size: 1.3vw;
+    color: white;
+    padding: 5%;
+    grid-gap: 5%;
+
+}
+
+.li img {
+    justify-self: center;
+    width: 70%;
+
+}
+
+.li:hover {
+    background-color: rgba(255, 255, 255, 0.411);
+}
