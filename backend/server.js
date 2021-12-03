@@ -24,6 +24,7 @@ app.get('/', (req, res) => {
     res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' });
 });
 
+// console.log(require('crypto').randomBytes(64).toString('hex'));
 app.use('/api', userRouter);
 app.listen(port, () => {
     // perform a database connection when server starts
