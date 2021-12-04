@@ -76,6 +76,19 @@ const login = (req, res) => {
       return (JSON.parse(userData));
   }
 
+  const getUser = function(req,res,next){
+    User.find()
+    .then(response=> {
+      res.json({
+        response
+      })
+    })
+    .catch(err => {
+      res.json({
+        message: 'An error occur'
+      })
+    })
+  }
   
 
-module.exports = {login,signIn,parseJwt}
+module.exports = {login,signIn,parseJwt,getUser}

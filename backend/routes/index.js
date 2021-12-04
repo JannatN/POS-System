@@ -8,11 +8,12 @@ const auth = require('../middlewares/auth');
 
 
 router.post('/login',UserController.signIn);
+router.get('/users',[isAdmin],UserController.getUser);
 
 router.post('/product',ProductCtrl.createProduct)
 router.put('/product/:id', ProductCtrl.updateProduct)
 router.delete('/product/:id', ProductCtrl.deleteProduct)
 router.get('/product/:id', ProductCtrl.getProductById)
-router.get('/products',[auth],ProductCtrl.getProducts)
+router.get('/products',ProductCtrl.getProducts)
 
 module.exports = router;
