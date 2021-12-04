@@ -1,22 +1,18 @@
-import './dashboard.css';
+import "./dashboard.css";
 import React, { Component } from "react";
-import Blouse from '../assets/blouse.png';
-import Plus from '../assets/plus.png';
-import Min from '../assets/minus.png';
-import Calculater from '../assets/cal.png';
-import Sidebar from '../components/sidebar';
+import Blouse from "../assets/blouse.png";
+import Plus from "../assets/plus.png";
+import Min from "../assets/minus.png";
+import { Button, Input, Icon, Search, Form } from "semantic-ui-react";
+
+import Sidebar from "../components/sidebar";
 import SearchBar from "material-ui-search-bar";
-import Grid from '@mui/material/Grid';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControl from '@mui/material/FormControl';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Radio from '@mui/material/Radio';
-import Select from '@mui/material/Select';
-import MenuItem from '@mui/material/MenuItem';
-import Container from '@mui/material/Container';
-import Calculator from '../components/calculator';
+import Grid from "@mui/material/Grid";
 
-
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import Container from "@mui/material/Container";
+import Calculator from "../components/calculator";
 
 class Dashboard extends Component {
   render() {
@@ -28,21 +24,29 @@ class Dashboard extends Component {
         <Sidebar />
         <Container className="container" maxWidth="sm">
           <div className="orderDetails">
-            <div className="sec-1">
-              <img src={Blouse} alt=' icon' />
-              <div className="addMin">
-                <img src={Plus} alt=' icon' />
-                <div className="sec-1-sq">0</div>
-                <img src={Min} alt=' icon' />
-                {/* <label> Price:</label> */}
-                <div className="sec-1-sq">0 </div>
-                {/* <label > Total: </label> */}
-                <div className="sec-1-sq">0</div>
-
+            <div>
+              <img src={Blouse} alt=" icon" className="blouse" />
+              <div className="sec-1">
+                <Button circular color="green" icon="plus" className="pd" />
+                <Input
+                  placeholder="Price"
+                  color="gray"
+                  className="smInput pd"
+                />
+                <Button circular color="red" icon="minus" className="pd" />
+                <Input
+                  placeholder="Price"
+                  color="gray"
+                  className="mdInput pd"
+                />
+                <Input
+                  placeholder="Totel"
+                  color="gray"
+                  className="mdInput pd"
+                />
               </div>
             </div>
             <div className="sec-2">
-
               <table className="table table-striped">
                 <h3>Order Details</h3>
                 <tbody>
@@ -64,75 +68,98 @@ class Dashboard extends Component {
                   </tr>
                 </tbody>
               </table>
-
             </div>
             <div className="sec-3">
-              <button className="btn" className="yellow" type="submit">Print</button>
-              <button className="btn" className="blue" type="submit">Discount</button>
-              <button className="btn" className="red" type="submit">Delete</button>
-              <button className="btn" className="green" type="submit">Pay</button>
+              <button className="btn" className="yellow" type="submit">
+                <Icon name="print" />
+                Print
+              </button>
+              <button className="btn" className="blue" type="submit">
+                <Icon name="arrows alternate vertical" />
+                Discount
+              </button>
+              <button className="btn" className="red" type="submit">
+                <Icon name="trash" />
+                Delete
+              </button>
+              <button className="btn" className="green" type="submit">
+                <Icon name="money bill alternate outline" />
+                Pay
+              </button>
             </div>
-
           </div>
         </Container>
         <div className="third-col">
-          <SearchBar className="searchbar" />
+          <Search
+            size="small"
+            icon="search"
+            iconPosition="left"
+            placeholder="Search..."
+          />
           <div className="thrd-sec2">
-            <lebel>Total</lebel>
-            <lebel>Currency</lebel>
-            <lebel>Tenderd</lebel>
-            <lebel>Change</lebel>
-            <Grid className="boxes" container />
-            <Grid className="select">
-              <Select
-                labelId="demo-simple-select-standard-label"
-                id="demo-simple-select-standard"
-                // value={cuurency}
-                // onChange={handleChange}
-                // label="Age"
-              >
-                <MenuItem value="">
-                </MenuItem>
-                <MenuItem value={"JD"}>JD</MenuItem>
-                <MenuItem value={"NIS"}>NIS</MenuItem>
-                <MenuItem value={"USD"}>USD</MenuItem>
-              </Select>
-            </Grid>
-            <Grid className="boxes" container />
-            <Grid className="boxes" container />
+       
+             <Input
+                  placeholder="0.0"
+                  color="gray"
+                  className="total pd"
+                />
+                <label className="field pd">
+                Currency  
+                <select
+                required
+                  name="product_category"
+                 
+                  className="ui fluid selection dropdown smInput pd"
+                >
+                  <option value="nis">NIS</option>
+                  <option value="dollar">Dr</option>
+                  <option value="jd">JD</option>
+                  <option value="uro">UR</option>
+                </select>
+              </label>
 
+                <label className="field pd">
+                Tenderd 
+                <Input
+                  placeholder="100"
+                  color="gray"
+                  className="smInput pd"
+                />
+                </label>
+                
+                <label className="field pd">
+                  Change
+                <Input
+                  placeholder="50"
+                  color="gray"
+                  className="smInput pd"
+                /> 
+                </label>
           </div>
+          <Calculator />
 
-          {/* <div className="cal"><img src={Calculater} alt=' icon' width="70%" /></div> */}
-          <Calculator
-          // expression={this.state.expression}
-          // result={this.state.result}
-          // handleClick={this.handleClick}
-        />
-          {/* <FormControl className="radio" component="fieldset">
-            <RadioGroup row aria-label="pay" name="row-radio-buttons-group">
-              <FormControlLabel className="radio" value="cash" control={<Radio />} label="Cash" />
-              <FormControlLabel className="radio" value="credit" control={<Radio />} label="Credit" />
-              <FormControlLabel className="radio" value="check" control={<Radio />} label="Check" />
-            </RadioGroup>
-          </FormControl> */}
           <div className="radio">
             <input type="radio" id="cash" name="cash" value="Cash" />
-            <label for="cash">Cash</label>
+            <label for="cash" className="pd">
+              Cash
+            </label>
             <input type="radio" id="credit" name="credit" value="credit" />
-            <label for="credit">Credit</label>
+            <label for="credit" className="pd">
+              Credit
+            </label>
 
             <input type="radio" id="check" name="check" value="check" />
-            <label for="check">Checks</label>
+            <label for="check" className="pd">
+              Checks
+            </label>
 
             <input type="radio" id="not" name="not" value="not" />
-            <label for="cash">Not Paid</label>
-
+            <label for="cash" className="pd">
+              Not Paid
+            </label>
           </div>
         </div>
-
       </div>
-
     );
   }
 }

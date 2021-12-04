@@ -1,44 +1,42 @@
 body {
     background-color: rgb(255, 255, 255);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
 }
 
 .cont {
     display: grid;
-    grid-template-columns: 20% 50% 30%;
+    grid-template-columns: 15% 50% 35%;
 }
 
 .orderDetails {
     display: grid;
     grid-template-rows: auto auto;
     margin: 5%;
-    width: auto;
+    width: 90%;
     background-color: #F9F7F7;
     padding: 10%;
-    height: 70vh;
-    border-radius: 10%;
+    height: 85vh;
+    border-radius: 3%;
     box-shadow: 5px 5px 2px rgba(128, 128, 128, 0.432);
 
 }
-
+.blouse{
+    display: inline;
+}
 .sec-1 {
-    display: grid;
-    grid-template-columns: auto auto auto;
+   margin-top: -50px;
+   margin-left: 60px;
+   padding-left: 8px;   
 }
-
-.addMin {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-gap: 10%;
+.pd{
+    padding-left: 5px;
+    padding-right: 5px;
 }
-
-.addMin div {
-    background-color: white;
-    height: 20%;
-    width: 100%;
-    border: 1px solid #2A8A87;
-    text-align: center;
+.smInput{
+    width: 75px;
+}
+.mdInput{
+    width: 80px;
 }
 
 table {
@@ -59,6 +57,7 @@ h3 {
 }
 
 tr:nth-child(odd) {
+    color:#5faf59;
     background-color: white;
 }
 
@@ -80,19 +79,23 @@ tr:nth-child(odd) {
 }
 
 .sec-3 button {
-    width: 70%;
-    height: 40%;
-    font-size: 1.2vw;
+    width: 90%;
+    height: 45%;
+    font-size: 1vw;
     color: #ffffff;
     border-radius: 10%;
     outline: none;
     text-decoration: none;
     padding: 6%;
     border: none;
+    
 }
 
+
 .sec-3 button:hover {
-    border: 1px solid red;
+    cursor: pointer;
+    box-shadow: 5px 5px 2px rgba(128, 128, 128, 0.432);
+    
 }
 
 .red {
@@ -114,13 +117,20 @@ tr:nth-child(odd) {
 .thrd-sec2 {
     display: grid;
     grid-template-columns: auto auto auto auto;
+    height: 20px;
+    width: 20px;
+    margin-top: -20px;
+    color: #2A8A87;
+
+}
+.total{
+    width: 120px;
+    
 }
 
 
 
-.searchbar {
-    border: 1px solid #2A8A87;
-}
+
 
 .boxes {
     border: 1px solid #2A8A87;
@@ -132,5 +142,5 @@ tr:nth-child(odd) {
 }
 .radio{
     font-size: 15px;
+    margin-top: -25px;
 }
-

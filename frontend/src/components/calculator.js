@@ -13,8 +13,8 @@ const Display = props => {
 const Calculator = props => {
   return (
     <div className="contCalc" onClick={props.handleClick}>
-      <button className="item ac" value="AC">
-        AC
+      <button className="item ac" value="C">
+        C
       </button>
       <button className="item divide" value="/">
         /
@@ -55,15 +55,19 @@ const Calculator = props => {
       <button className="item number" value="3">
         3
       </button>
+      <button className="item dot" value=".">
+        .
+      </button>
       <button className="item equals" value="Finish">
         Finish
       </button>
       <button className="item zero" value="0">
         0
       </button>
-      <button className="item dot" value=".">
-        .
+      <button className="item percent" value="%">
+        %
       </button>
+      
     </div>
   );
 };
