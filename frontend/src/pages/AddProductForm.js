@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Form, Segment, Header, Message } from "semantic-ui-react";
+import Sidebar from "../components/sidebar";
 import api from "../api";
 
 class AddProductForm extends Component {
@@ -83,6 +84,8 @@ class AddProductForm extends Component {
 
     return (
       <div>
+        
+        <Sidebar/>  
         <Header as="h2">Add Product</Header>
         <Segment raised padded="very">
           <Form
