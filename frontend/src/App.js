@@ -1,35 +1,17 @@
 import React, { Component } from 'react';
 import './App.css';
+import AddProductForm from './pages/AddProductForm'
+import { Container } from "semantic-ui-react";
 
 class App extends Component {
-state = {
-    data: null
-  };
 
-  componentDidMount() {
-      // Call our fetch function below once the component mounts
-    this.callBackendAPI()
-      .then(res => this.setState({ data: res.express }))
-      .catch(err => console.log(err));
-  }
-    // Fetches our GET route from the Express server. (Note the route we are fetching matches the GET route from server.js
-  callBackendAPI = async () => {
-    const response = await fetch('/');
-    const body = await response.json();
-
-    if (response.status !== 200) {
-      throw Error(body.message) 
-    }
-    return body;
-  };
 
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          WELCOME TO POS SYSTEM
-        </header>
-        <p className="App-intro">{this.state.data}</p>
+         <Container style={{ margin: 20 }}>
+        <AddProductForm />
+        </Container>
       </div>
     );
   }
