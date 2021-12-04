@@ -9,7 +9,7 @@ const Product = new Schema({
     product_size: { type: String, required: false },
     product_color: { type: String, required: false },
     product_description: { type: String, required: false },
-    product_barcode: { type: Number, required: false },
+    product_barcode: { type: String, required: false },
 }, { timestamps: true }, )
 
 module.exports = mongoose.model('products', Product)

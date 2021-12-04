@@ -1,0 +1,136 @@
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.cont {
+    display: grid;
+    grid-template-columns: 20% 50% 30%;
+}
+
+.orderDetails {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 5%;
+    width: auto;
+    background-color: #F9F7F7;
+    padding: 10%;
+    height: 70vh;
+    border-radius: 10%;
+    box-shadow: 5px 5px 2px rgba(128, 128, 128, 0.432);
+
+}
+
+.sec-1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.addMin {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 10%;
+}
+
+.addMin div {
+    background-color: white;
+    height: 20%;
+    width: 100%;
+    border: 1px solid #2A8A87;
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 18px;
+    padding: 10%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+h3 {
+    color: #2A8A87;
+}
+
+tr:nth-child(odd) {
+    background-color: white;
+}
+
+
+.third-col {
+    margin: 10%;
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-gap: 3%;
+}
+
+.cal {
+    text-align: center;
+}
+
+.sec-3 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.sec-3 button {
+    width: 70%;
+    height: 40%;
+    font-size: 1.2vw;
+    color: #ffffff;
+    border-radius: 10%;
+    outline: none;
+    text-decoration: none;
+    padding: 6%;
+    border: none;
+}
+
+.sec-3 button:hover {
+    border: 1px solid red;
+}
+
+.red {
+    background-color: #D7545D;
+}
+
+.blue {
+    background-color: #2A8A87;
+}
+
+.yellow {
+    background-color: #E3B750;
+}
+
+.green {
+    background-color: #7CE775;
+}
+
+.thrd-sec2 {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+
+
+.searchbar {
+    border: 1px solid #2A8A87;
+}
+
+.boxes {
+    border: 1px solid #2A8A87;
+    grid-gap: 5%;
+}
+
+.select {
+    margin: auto;
+}
+.radio{
+    font-size: 15px;
+}
+
