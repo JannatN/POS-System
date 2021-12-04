@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Cashier from './components/cashier';
 import AddProductForm from './pages/AddProductForm'
 import Dashboard from './pages/dashboard'
 
@@ -11,10 +12,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-         <Container style={{ margin: 20 }}>
+       
+         {/* <Container style={{ margin: 20 }}> */}
         {/* <AddProductForm /> */}
-        <Dashboard/>
-        </Container>
+        <Cashier/>
+        {/* <Dashboard/> */}
+        {/* </Container> */}
       </div>
     );
   }

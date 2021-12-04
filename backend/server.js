@@ -8,7 +8,8 @@ const app = express();
 const port = process.env.PORT || 5000;
 
 const db = require("./db/conn");
-const productRouter = require('./routes');
+const userRouter = require('./routes');
+
 
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors());
@@ -23,7 +24,8 @@ app.get('/', (req, res) => {
     
 });
 
-app.use('/api', productRouter);
+// console.log(require('crypto').randomBytes(64).toString('hex'));
+app.use('/api', userRouter);
 app.listen(port, () => {
     // perform a database connection when server starts
     // dbo.connectToServer(function(err) {
