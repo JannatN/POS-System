@@ -159,6 +159,7 @@ class Dashboard extends Component {
             </label>
           </div>
         </div>
+        <div className="copyrights"><p>2021 Gitters co &copy; All rights reserved</p></div>
       </div>
     );
   }

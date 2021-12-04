@@ -15,7 +15,7 @@ body {
     width: 90%;
     background-color: #F9F7F7;
     padding: 10%;
-    height: 85vh;
+    height: 87vh;
     border-radius: 3%;
     box-shadow: 5px 5px 2px rgba(128, 128, 128, 0.432);
 
@@ -143,4 +143,10 @@ tr:nth-child(odd) {
 .radio{
     font-size: 15px;
     margin-top: -25px;
+}
+.copyrights{
+    position:fixed;
+    margin-top: 45%;
+    margin-left: 50%;
+    
 }
