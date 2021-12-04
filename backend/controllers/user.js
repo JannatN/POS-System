@@ -3,43 +3,7 @@ var jwt = require("jsonwebtoken");
 var bcrypt = require("bcrypt");
 const atob = require('atob');
 
-const login = (req, res) => {
-  var username = req.body.username
-  var password = req.body.password
 
-  User.findOne({
-    username: req.body.username
-  }).then(user => {
-    if(user){
-      // bcrypt.compare(password,user.password, function(err,result){
-      //   if(err){
-      //     res.json({
-      //       error: err
-      //     })
-      //   }
-      let result = user.password
-      // console.log(result == password)
-      // console.log(result)
-      // console.log(password)
-        if(result == password){
-          let token = jwt.sign({username:user.username},'verySecretValue', {expiresIn:'1h'})
-          res.json({
-            message: 'Login Successful',
-            token
-          })
-        }else{
-          res.json({
-            message: 'Password does not matched'
-          })
-        }
-      //})
-    }else{
-      res.json({
-        message: 'No user found !'
-      })
-    }
-  })
-  }
   const signIn = async function (req, res) {
     const user = await User.findOne({
       where: {
@@ -63,7 +27,7 @@ const login = (req, res) => {
     // object["cartID"] = customer.cartID
     const token = jwt.sign(object, process.env.JWT_SECRET, {})
     res.json({
-      data: 'singin success',
+      data: 'signIn success',
       //user: user,
       token: token
     });
@@ -91,4 +55,4 @@ const login = (req, res) => {
   }
   
 
-module.exports = {login,signIn,parseJwt,getUser}
+module.exports = {signIn,parseJwt,getUser}
