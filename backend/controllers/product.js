@@ -9,9 +9,9 @@ createProduct = (req, res) => {
             error: 'You have to fill all the requested inputs',
         })
     }
-
+    
     const product = new Product(body)
-    console.log("this is the product: ", product)
+    
     if (!product) {
         return res.status(400).json({ success: false, error: err })
     }
@@ -116,11 +116,20 @@ getProducts = async(req, res) => {
         return res.status(200).json({ success: true, data: products })
     }).catch(err => console.log(err))
 }
-
+searchProduct = async(req, res) => {
+    let product = await Product.find({product_name:req.params.name});
+    if (!product) {
+        return res
+            .status(404)
+            .json({ success: false, error: `Products not found` })
+    }
+    return res.status(200).json({ success: true, data: product })
+}
 module.exports = {
     createProduct,
     updateProduct,
     deleteProduct,
     getProductById,
     getProducts,
+    searchProduct
 }
