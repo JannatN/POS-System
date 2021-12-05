@@ -4,6 +4,10 @@ import './App.css';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
+import Cashier from './components/cashier';
+import AddProductForm from './pages/AddProductForm'
+import Dashboard from './pages/dashboard'
+import { Container } from "semantic-ui-react";
 
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
