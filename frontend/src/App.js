@@ -4,6 +4,10 @@ import './App.css';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
+import Cashier from './components/cashier';
+import AddProductForm from './pages/AddProductForm'
+import Dashboard from './pages/dashboard'
+import { Container } from "semantic-ui-react";
 
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
@@ -12,7 +16,7 @@ import {  createTheme,ThemeProvider } from '@mui/material/styles';
 import './login.css';
 import cashierLogo from './assets/cashier.png';
 import api from "./api";
-
+import { Navigate } from 'react-router-dom'
 const theme = createTheme();
 class App extends Component {
   constructor(props) {
@@ -21,6 +25,8 @@ class App extends Component {
     this.state = {
       username: "",
       password: "",
+      toDashboard:false, 
+      setToDashboard:false
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
@@ -49,6 +55,7 @@ class App extends Component {
       .logIn(payload)
       .then((res) => {
         this.setState({
+          toDashboard:true,
           username: "",
           password: "",
         });
@@ -60,6 +67,9 @@ class App extends Component {
 
   render() {
     const state = this.state;
+    if (state.toDashboard === true) {
+      return <Navigate to='/dashboard'/>
+    }
     return (
       <div className="App">
         <ThemeProvider theme={theme}>
