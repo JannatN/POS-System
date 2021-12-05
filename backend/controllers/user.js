@@ -6,9 +6,7 @@ const atob = require('atob');
 
   const signIn = async function (req, res) {
     const user = await User.findOne({
-      where: {
         username: req.body.username
-      }
     });
     if (!user) return res.status(400).json({
       error: 'user not found'
@@ -31,6 +29,7 @@ const atob = require('atob');
       //user: user,
       token: token
     });
+    console.log(token)
   }
 
   const parseJwt = function (token) {
