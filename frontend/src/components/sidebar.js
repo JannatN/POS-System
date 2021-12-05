@@ -7,6 +7,7 @@ import Cashiers from '../assets/clerk.png';
 import Logout from '../assets/logout.png';
 import Logo from '../assets/logo.png';
 import './sidebar.css';
+import { Link } from 'react-router-dom';
 
 class Sidebar extends Component {
 
@@ -46,11 +47,11 @@ class Sidebar extends Component {
 
                     <div className="sidebar__link">
                         <i className="fa fa-handshake-o"><img src={Cashiers} alt="cashiers" width="20px" /></i>
-                        <a href="#">Cashiers</a>
+                        <Link to='/cashier'>Cashiers</Link>
                     </div>
                     <div className="sidebar__link">
                         <i className="fa fa-question"><img src={Logout} alt="logout" width="20px" /></i>
-                        <a href="#">Logout</a>
+                        <Link to='/'>Logout</Link>
                     </div>
                 </div>
             </div>
