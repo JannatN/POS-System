@@ -3,21 +3,16 @@ import './App.css';
 import Cashier from './components/cashier';
 import AddProductForm from './pages/AddProductForm'
 import Dashboard from './pages/dashboard'
-
 import { Container } from "semantic-ui-react";
 
 class App extends Component {
-
-
   render() {
     return (
       <div className="App">
-       
-         {/* <Container style={{ margin: 20 }}> */}
-        {/* <AddProductForm /> */}
-        <Cashier/>
-        {/* <Dashboard/> */}
-        {/* </Container> */}
+        <Dashboard/>
+      
+        {/* <Cashier/>
+       */}
       </div>
     );
   }
