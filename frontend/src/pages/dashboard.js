@@ -1,16 +1,8 @@
 import "./dashboard.css";
 import React, { Component } from "react";
 import Blouse from "../assets/blouse.png";
-import Plus from "../assets/plus.png";
-import Min from "../assets/minus.png";
 import { Button, Input, Icon, Search, Form } from "semantic-ui-react";
-
 import Sidebar from "../components/sidebar";
-import SearchBar from "material-ui-search-bar";
-import Grid from "@mui/material/Grid";
-
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
 import Container from "@mui/material/Container";
 import Calculator from "../components/calculator";
 
@@ -112,7 +104,7 @@ class Dashboard extends Component {
                   className="ui fluid selection dropdown smInput pd"
                 >
                   <option value="nis">NIS</option>
-                  <option value="dollar">Dr</option>
+                  <option value="dollar">USD</option>
                   <option value="jd">JD</option>
                   <option value="uro">UR</option>
                 </select>

@@ -10,6 +10,7 @@ import {
   Route
 } from "react-router-dom";
 import Cashier from './components/cashier';
+import Stock from './pages/stock';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -18,6 +19,8 @@ ReactDOM.render(
     <Route exact path="/" element={<App />} />
       <Route path="dashboard" element={<Dashboard />} />
       <Route path="cashier" element={<Cashier />} />
+      <Route path="stock" element={<Stock/>} />
+
     </Routes>
     </BrowserRouter>
   </React.StrictMode>,
