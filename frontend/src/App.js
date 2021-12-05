@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Cashier from './components/cashier';
 import AddProductForm from './pages/AddProductForm'
 import Dashboard from './pages/dashboard'
 import { Container } from "semantic-ui-react";
@@ -9,10 +10,9 @@ class App extends Component {
     return (
       <div className="App">
         <Dashboard/>
-        
-         {/* <Container style={{ margin: 20 }}>
-            <AddProductForm />
-        </Container> */}
+      
+        {/* <Cashier/>
+       */}
       </div>
     );
   }
