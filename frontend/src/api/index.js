@@ -1,10 +1,12 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'http://localhost:4000/api',
+    baseURL: 'http://localhost:5000/api',
 })
 
 export const addProduct = payload => api.post(`/product`, payload)
+export const register = payload => api.post(`/register`, payload)
+
 // export const getAllPets = () => api.get(`/pets`)
 // export const updatePetById = (id, payload) => api.put(`/pet/${id}`, payload)
 // export const deletePetById = id => api.delete(`/pet/${id}`)
@@ -12,6 +14,7 @@ export const addProduct = payload => api.post(`/product`, payload)
 
 const apis = {
     addProduct,
+    register,
 }
 
 export default apis
