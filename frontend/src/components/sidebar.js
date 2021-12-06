@@ -34,7 +34,7 @@ class Sidebar extends Component {
                     </div>
                     <div className="sidebar__link">
                         <i className="fa fa-user-secret" aria-hidden="true" > <img src={Stock} alt="stock" width="20px" /></i>
-                        <a href="#"> Stock</a>
+                        <Link to='/stock'>Stock</Link>
                     </div>
                     <div className="sidebar__link">
                         <i className="fa fa-building-o"> <img src={Financial} alt="finan" width="20px" /></i>

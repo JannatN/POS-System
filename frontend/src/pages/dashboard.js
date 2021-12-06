@@ -1,9 +1,9 @@
 import "./dashboard.css";
 import React, { Component } from "react";
 import Blouse from "../assets/blouse.png";
-import { Button, Input, Icon, Search } from "semantic-ui-react";
 import { Grid, Header, Segment } from "semantic-ui-react";
 import _ from "lodash";
+import { Button, Input, Icon, Search, Form } from "semantic-ui-react";
 import Sidebar from "../components/sidebar";
 import Container from "@mui/material/Container";
 import Calculator from "../components/calculator";
@@ -136,7 +136,7 @@ class Dashboard extends Component {
               </div>
             </div>
             <div className="sec-2">
-              <table className="table table-striped">
+              <table className="tableOrder">
                 <h3>Order Details</h3>
                 <tbody>
                   <tr>
@@ -203,7 +203,6 @@ class Dashboard extends Component {
                 required
                 name="product_category"
                 className="ui fluid selection dropdown smInput pd"
-
               >
                 <option value="nis">NIS</option>
                 <option value="dollar">Dr</option>
