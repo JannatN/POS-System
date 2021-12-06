@@ -30,7 +30,7 @@ class Sidebar extends Component {
                 <div className="sidebar__menu">
                     <div className="sidebar__link active_menu_link">
                         <i className="fa fa-home"> <img src={Dash} alt="dashboard_icon" width="20px" /></i>
-                        <a href="#">Dashboard</a>
+                        <Link to='/dashboard'>Dashboard</Link>
                     </div>
                     <div className="sidebar__link">
                         <i className="fa fa-user-secret" aria-hidden="true" > <img src={Stock} alt="stock" width="20px" /></i>
