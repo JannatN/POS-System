@@ -39,7 +39,7 @@ class Dashboard extends Component {
               </div>
             </div>
             <div className="sec-2">
-              <table className="table table-striped">
+              <table className="tableOrder">
                 <h3>Order Details</h3>
                 <tbody>
                   <tr>

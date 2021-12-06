@@ -7,12 +7,12 @@ import { Icon } from "semantic-ui-react";
 class Stock extends Component {
     render() {
         return (
-            <div className='row'>
+            <div className='ext'>
                 <div className='navbar'><SideBar /></div>
                 <div className="contentDiv">
                     <div className="header">
-                        <h2 className="stockTitle">Stock</h2>
-                        <button className='addProduct'>
+                        <h2 className="h2Title">Stock</h2>
+                        <button className='addbutton'>
                             <Icon name="plus" />
                             Add Product</button>
                     </div>
