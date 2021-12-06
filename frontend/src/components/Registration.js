@@ -77,7 +77,9 @@ class Registration extends Component {
       const state = this.state;
       return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '100vh' }}>
+      <Grid container component="main" sx={{ height: '100vh' }}
+     
+      >
         <CssBaseline />
         <Grid
           item
@@ -105,9 +107,9 @@ class Registration extends Component {
           >
            
             <h1  className="a" >
-              Sign in
+              Sign Up
             </h1>
-            <Box     className="m" component="form" noValidate  sx={{ mt: 1 }}>
+            <Box       className="orderDetails"  component="form" noValidate  sx={{ mt: 1 }}>
               <TextField
             
                 margin="normal"
@@ -152,7 +154,15 @@ class Registration extends Component {
     </Box>
             
               <br></br>
-              <div  className="signin"> <Button type="submit" onClick={this.handleRegister}>Register</Button></div>
+             
+              <div  >
+              <button  className="signin" type="submit"  onClick={this.handleRegister}>
+             Register
+              
+              </button>
+             
+           
+            </div>
               <Grid container>
               </Grid>
             </Box>

@@ -4,10 +4,11 @@ const api = axios.create({
     baseURL: 'http://localhost:5000/api',
 })
 
-export const addProduct = payload => api.post(`/product`, payload)
-export const register = payload => api.post(`/register`, payload)
+ const register = payload => api.post(`/register`, payload)
+ const logIn = payload => api.post(`/login`, payload)
+ const addProduct = payload => api.post(`/product`, payload)
+ const searchProduct = name => api.get(`/products/${name}`)
 
-export const logIn = payload => api.post(`/login`, payload)
 // export const getAllPets = () => api.get(`/pets`)
 // export const updatePetById = (id, payload) => api.put(`/pet/${id}`, payload)
 // export const deletePetById = id => api.delete(`/pet/${id}`)
@@ -16,7 +17,9 @@ export const logIn = payload => api.post(`/login`, payload)
 const apis = {
     addProduct,
     register,
-    logIn
+
+    logIn,
+    searchProduct
 }
 
 export default apis
