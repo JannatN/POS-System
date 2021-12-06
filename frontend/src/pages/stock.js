@@ -3,6 +3,7 @@ import SideBar from '../components/sidebar'
 import './stock.css'
 import Table from '../components/table'
 import { Icon } from "semantic-ui-react";
+import { Link } from 'react-router-dom';
 
 class Stock extends Component {
     render() {
@@ -12,9 +13,10 @@ class Stock extends Component {
                 <div className="contentDiv">
                     <div className="header">
                         <h2 className="h2Title">Stock</h2>
-                        <button className='addbutton'>
-                            <Icon name="plus" />
-                            Add Product</button>
+                        <Link to='/addProduct'>
+                            <button className='addbutton'>
+                                <Icon name="plus" />
+                                Add Product </button></Link>
                     </div>
                     <div className="box">
                         <div class="ui card">
