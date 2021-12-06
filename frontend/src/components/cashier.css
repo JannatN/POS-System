@@ -1,22 +1,21 @@
 .row {
     display: flex;
-    font-family: Lato;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
+   
     
   }
 
   .column {
-    flex: 80%;
+    flex: 85%;
     height: 100vh ; /* Should be removed. Only for demonstration */
     background-color:#FFFFFF;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
   }
 
   .navbar {
-    flex: 20%;
-    height: 100vh ; /* Should be removed. Only for demonstration */
-    background-color:#bbb;
+    flex: 15%; /* Should be removed. Only for demonstration */
   }
   .addingCashier{
     color:#ffffff;

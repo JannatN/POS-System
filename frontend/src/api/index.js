@@ -7,6 +7,7 @@ const api = axios.create({
 export const addProduct = payload => api.post(`/product`, payload)
 export const register = payload => api.post(`/register`, payload)
 
+export const logIn = payload => api.post(`/login`, payload)
 // export const getAllPets = () => api.get(`/pets`)
 // export const updatePetById = (id, payload) => api.put(`/pet/${id}`, payload)
 // export const deletePetById = id => api.delete(`/pet/${id}`)
@@ -15,6 +16,7 @@ export const register = payload => api.post(`/register`, payload)
 const apis = {
     addProduct,
     register,
+    logIn
 }
 
 export default apis

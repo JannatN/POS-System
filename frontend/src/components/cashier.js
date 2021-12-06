@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { Component } from "react";
 //import { Link } from "react-router-dom";
+import SideBar from './sidebar'
 
 
 import './cashier.css'
@@ -9,7 +10,7 @@ class Cashier extends Component {
     render() {
         return (
             <div className= 'row'>
-                <div className= 'navbar'></div>
+                <div className= 'navbar'><SideBar/></div>
                 <div className= 'column'>
                     <h2 style={{ paddingLeft:'50px'}} >Cashier</h2>
                     <button className= 'addingCashier'><img src={Logo} style={{ paddingLeft:'10px'}}></img>Add cashier</button>

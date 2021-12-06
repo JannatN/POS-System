@@ -10,15 +10,13 @@ const {
 
   const signIn = async function (req, res) {
     const user = await User.findOne({
-      where: {
         username: req.body.username
-      }
     });
     if (!user) return res.status(400).json({
       error: 'user not found'
     });
     // check user password with hashed password stored in the database
-    const validPassword = req.body.password == 123 //await bcrypt.compare(req.body.password, user.password);
+    const validPassword = await bcrypt.compare(req.body.password, user.password);
     if (!validPassword) return res.status(400).json({
       error: 'Invalid Password'
     });
@@ -27,14 +25,12 @@ const {
        user_role: user.user_role
      }
   
-    // object["customerID"] = customer.customerID
-    // object["cartID"] = customer.cartID
     const token = jwt.sign(object, process.env.JWT_SECRET, {})
     res.json({
       data: 'signIn success',
-      //user: user,
       token: token
     });
+    console.log(token)
   }
 
   const parseJwt = function (token) {
