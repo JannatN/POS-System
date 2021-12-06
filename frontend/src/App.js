@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
-<<<<<<< HEAD
-=======
-import './App.css';
->>>>>>> f0d633ff9bedcbbf1bb5c434add6b8e71cf514c6
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
+import './components/Registration.css';
+
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -16,6 +14,9 @@ import api from "./api";
 import { Navigate } from 'react-router-dom'
 const theme = createTheme();
 class App extends Component {
+
+
+  
   constructor(props) {
     super(props);
 
@@ -67,6 +68,8 @@ class App extends Component {
     if (state.toDashboard === true) {
       return <Navigate to='/dashboard' />
     }
+
+    
     return (
       <div className="App">
         <ThemeProvider theme={theme}>
@@ -98,7 +101,7 @@ class App extends Component {
                 <h1 className="a" >
                   Sign in
                 </h1>
-                <Box className="m" component="form" noValidate sx={{ mt: 1 }}>
+                <Box className="orderDetails" component="form" noValidate sx={{ mt: 1 }}>
                   <TextField
                     onChange={this.handleInputChange}
                     margin="normal"
@@ -125,7 +128,16 @@ class App extends Component {
                   />
                   <Box sx={{ minWidth: 120 }}></Box>
                   <br></br>
-                  <div className="signin"> <Button type="submit" onClick={this.handleLogin}>Login</Button></div>
+                  <div > 
+                  
+                  
+                
+              <button  className="signin" type="submit"  onClick={this.handleLogin}>
+Login              
+              </button>
+             
+           </div>
+       
                   <Grid container>
                   </Grid>
                 </Box>

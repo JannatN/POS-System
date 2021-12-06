@@ -1,0 +1,42 @@
+.signin {
+  background-color: rgb(85, 151, 151);
+  width: 150px;
+  margin-left: 100px;
+  border-radius: 20px;
+  color: white;
+  height: 50px;
+  text-align: center;
+  padding: 15px;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  
+}
+.signin:hover{
+
+background-color: rgb(213, 201, 201);
+
+}
+.orderDetails {
+    display: grid;
+    grid-template-rows: auto auto;
+    margin: 5%;
+    width: 90%;
+    background-color: #F9F7F7;
+    padding: 10%;
+    height: 87vh;
+    border-radius: 3%;
+    box-shadow: 5px 5px 2px rgba(128, 128, 128, 0.432);
+
+}
+.but {
+  color: white;
+}
+
+
+
+.a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(15, 126, 126);
+}

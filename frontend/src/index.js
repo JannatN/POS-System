@@ -13,6 +13,7 @@ import {
 import Cashier from './components/cashier';
 import Stock from './pages/stock';
 import { addProduct } from './api';
+import Registration from './components/Registration';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -22,7 +23,7 @@ ReactDOM.render(
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="cashier" element={<Cashier />} />
         <Route path="stock" element={<Stock />} />
-        {/* <Route path="signup" element={<Register />} /> */}
+        <Route path="registration" element={<Registration />} />
         <Route path="addProduct" element={<AddProductForm />} />
 
 

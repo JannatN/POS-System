@@ -15,11 +15,10 @@ class Cashier extends Component {
                 <div className="contentDiv">
                     <div className="header">
                         <h2 className="h2Title">Cashiers</h2>
-                        <button className='addbutton'>
-                            <Icon name="plus" />
-                            Add Cashier
-                            <Link to='/signup'></Link>
-                        </button>
+                        <Link to='/registration'>
+                            <button className='addbutton'>
+                                <Icon name="plus" />
+                                Add Cashier </button></Link>
                     </div>
                     <table className='tableCh'>
                         <tr className='tr'>
