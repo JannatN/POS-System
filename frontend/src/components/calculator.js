@@ -1,5 +1,6 @@
 import React from "react";
 import './calculator.css';
+import { Link } from 'react-router-dom';
 
 const Display = props => {
   return (
@@ -58,16 +59,19 @@ const Calculator = props => {
       <button className="item dot" value=".">
         .
       </button>
-      <button className="item equals" value="Finish">
-        Finish
-      </button>
+      <div>
+      <Link to='/bill'>
+        <button className="item equals" value="Finish">
+          Finish
+        </button></Link></div>
+
       <button className="item zero" value="0">
         0
       </button>
       <button className="item percent" value="%">
         %
       </button>
-      
+
     </div>
   );
 };
