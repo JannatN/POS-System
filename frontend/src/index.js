@@ -4,6 +4,7 @@ import 'semantic-ui-css/semantic.min.css';
 import App from './App';
 import Dashboard from './pages/dashboard'
 import AddProductForm from './pages/AddProductForm'
+import Bill from './pages/bill'
 
 import {
   BrowserRouter,
@@ -23,6 +24,7 @@ ReactDOM.render(
         <Route path="dashboard" element={<Dashboard />} />
         <Route path="cashier" element={<Cashier />} />
         <Route path="stock" element={<Stock />} />
+        <Route  path="bill" element={<Bill />} />
         <Route path="registration" element={<Registration />} />
         <Route path="addProduct" element={<AddProductForm />} />
 
